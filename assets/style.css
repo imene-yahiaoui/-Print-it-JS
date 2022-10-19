@@ -103,7 +103,7 @@ header {
 .devis {
 	background-color: var(--secondary-color);
 }
-
+/* les changmant la */
 #banner {
 	display: flex;
 	flex-direction: column;
@@ -126,12 +126,28 @@ header {
 #banner .arrow {
 	position: absolute;
 }
+/*mes modifications*/
 #banner .arrow_left {
-	left: 10px;
+	left: -782px;
+	background-color: #CD006B;
+	color: #f9f911;
+	z-index: 2;
+	width: 39px;
+	height: 88px;
+	object-fit: none;
+	top: -79px;
 }
 #banner .arrow_right {
-	right: 10px;
-}
+	right: -782px;
+	background-color: #CD006B;
+	color: #f9f911;
+	z-index: 2;
+	width: 39px;
+	height: 88px;
+	object-fit: none;
+	top: -79px;
+  }
+ 
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
