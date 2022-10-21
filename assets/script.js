@@ -16,3 +16,35 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+const suivant=document.getElementsByClassName('.arrow_right');
+const precedent=document.getElementsByClassName('.arrow_left');
+const numSlid=slides.length;
+let count=0;
+
+function slideSuivant(){
+slides[count].classList.remove('active');
+if (count<numSlid-1){
+	count++
+} else {
+	count=0;
+}
+slides [count].classList.add('active')
+console.log(count);
+
+
+}
+suivant.addEventListener('click',slideSuivant);
+
+function slidePrecedent(){
+	slides[count].classList.remove('active');
+	if (count>0){
+		count--
+	} else {
+		count=numSlid -1;
+	}
+	slides [count].classList.add('active')
+	console.log(count);
+	
+	
+	}
+	precedent.addEventListener('click',slidePrecedent);
