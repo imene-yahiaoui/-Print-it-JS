@@ -1,3 +1,6 @@
+
+//console.log("hi you ")
+
 const slides = [
 	{
 		"image":"slide1.jpg",
@@ -16,24 +19,42 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-const suivant=document.getElementsByClassName('.arrow_right');
-const precedent=document.getElementsByClassName('.arrow_left');
+const image=document.getElementsByTagName('image')
+const tagline= txtCont.getElementsByTagName('tagline')
+const span= txtCont.getElementsByTagName('#banner span')
+const p= txtCont.getElementsByTagName('#banner p' );
+const dots=document.getElementsByClassName('dots');
+const suivant=document.getElementsByClassName("arrow_right");
+const precedent=document.getElementsByClassName('arrow_left');
 const numSlid=slides.length;
 let count=0;
 
-function slideSuivant(){
-slides[count].classList.remove('active');
-if (count<numSlid-1){
+function slideSuivant(count,){
+	count=count;
+	cImg.src="img/"+ image[count];
+
+	//changer  la place de dots active
+
+for (var x= 0; x<dots.length;x++){
+	dots[x].classList.remove('active')
+}
+dots [count].classList.add('active');
+
+//changer le text
+
+
+    slides[count].classList.remove('active');
+    if (count<numSlid-1){
 	count++
-} else {
+    } else {
 	count=0;
 }
-slides [count].classList.add('active')
+slides[count].classList.add('active')
 console.log(count);
 
 
 }
-suivant.addEventListener('click',slideSuivant);
+suivant.addEventListener ('click',slideSuivant);
 
 function slidePrecedent(){
 	slides[count].classList.remove('active');
