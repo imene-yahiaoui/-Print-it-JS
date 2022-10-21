@@ -19,21 +19,35 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+
 const image=document.getElementsByTagName('image')
-const tagline= txtCont.getElementsByTagName('tagline')
-const span= txtCont.getElementsByTagName('#banner span')
-const p= txtCont.getElementsByTagName('#banner p' );
+
+//const place=slides[count]
+const tagline=document.getElementsByTagName('tagLine')
+var cImg=document.getElementsByTagName('image')
+const span= document.getElementsByTagName('span')
+const p= document.getElementsByTagName('p');
 const dots=document.getElementsByClassName('dots');
-const suivant=document.getElementsByClassName("arrow_right");
+const suivant=document.getElementsByClassName('arrow_right');
 const precedent=document.getElementsByClassName('arrow_left');
 const numSlid=slides.length;
-let count=0;
 
-function slideSuivant(count,){
-	count=count;
-	cImg.src="img/"+ image[count];
+let count=1;
+console.log(numSlid)
+
+
+function slideSuivant(){
+
+
+
+	//changer img
+	cImg.src="./assets/images/slideshow/"+ image[slides[count]];
+
+	
 
 	//changer  la place de dots active
+
 
 for (var x= 0; x<dots.length;x++){
 	dots[x].classList.remove('active')
@@ -41,20 +55,28 @@ for (var x= 0; x<dots.length;x++){
 dots [count].classList.add('active');
 
 //changer le text
+tagline.txtCont=tagline.place
+
+//changer le span 
+
+span.txtCont=span[count]
 
 
-    slides[count].classList.remove('active');
+
+image[slides[count]].classList.remove('active');
     if (count<numSlid-1){
 	count++
     } else {
 	count=0;
 }
-slides[count].classList.add('active')
+image[slides[count]].classList.add('active')
 console.log(count);
 
 
 }
-suivant.addEventListener ('click',slideSuivant);
+//suivant.addEventListener ('click',slideSuivant)
+
+
 
 function slidePrecedent(){
 	slides[count].classList.remove('active');
@@ -68,4 +90,4 @@ function slidePrecedent(){
 	
 	
 	}
-	precedent.addEventListener('click',slidePrecedent);
+//	precedent.addEventListener('click',slidePrecedent);
