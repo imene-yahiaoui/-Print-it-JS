@@ -19,32 +19,89 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+//console.log(slides[0].image)
+let count=0;
 
-
-const image=document.getElementsByTagName('image')
-
-//const place=slides[count]
-const tagline=document.getElementsByTagName('tagLine')
-var cImg=document.getElementsByTagName('image')
-const span= document.getElementsByTagName('span')
-const p= document.getElementsByTagName('p');
-const dots=document.getElementsByClassName('dots');
-const suivant=document.getElementsByClassName('arrow_right');
-const precedent=document.getElementsByClassName('arrow_left');
+ const image=[slides[count].image];
+const tagline=[slides[count].tagLine];
+var cImg= "./assets/images/slideshow/";
+const dots=document.getElementsByClassName('dot');
+const suivant=document.querySelector('.right');
+const precedent=document.querySelector('.left');
 const numSlid=slides.length;
+const banner = document.getElementById('banner');
+const img= document.getElementsByClassName('active');
 
-let count=1;
-console.log(numSlid)
 
-
+console.log(dots);
 function slideSuivant(){
+dots[count].classList.remove('dot_selected');
+if (count<numSlid-1){
+	count++;
 
-
-
-	//changer img
-	cImg.src="./assets/images/slideshow/"+ image[slides[count]];
+}else{
+	count=0;
 
 	
+}
+
+dots[count].classList.add('dot_selected');
+console.log(count);
+}
+
+suivant.addEventListener('click' ,slideSuivant);
+
+
+
+
+/*
+slides.forEach(post =>{
+	img[0].innerHTML=
+	`
+	<img src=${cImg+image}></img>`
+	count++
+	img[1].innerHTML=` ${tagline}`
+	
+
+
+
+		})
+	
+	/*
+ image.classList.remove('active');
+if (count<numSlid-1){
+count++
+} else {
+count=0;
+}
+image.classList.add('active')
+console.log(count);
+
+*/
+
+ 
+
+
+
+/*
+var img= (slides[count].image)
+console.log(img)
+slides.forEach(post =>{
+
+content.innerHTML=
+`
+
+img.innerHtml= <img src="${cImg}"+"${[slides[count].image]}">;
+
+
+<p.innerHTML= <p"${[slides[count].tagLine]}"></p>
+
+
+`
+*/
+	
+
+	/*
 
 	//changer  la place de dots active
 
@@ -60,21 +117,23 @@ tagline.txtCont=tagline.place
 //changer le span 
 
 span.txtCont=span[count]
+*/
 
 
+/*
 
-image[slides[count]].classList.remove('active');
+slides.classList.remove('active');
     if (count<numSlid-1){
 	count++
     } else {
 	count=0;
 }
-image[slides[count]].classList.add('active')
+ slides.classList.add('active')
 console.log(count);
 
 
 }
-//suivant.addEventListener ('click',slideSuivant)
+suivant.addEventListener('click' ,slideSuivant);
 
 
 
@@ -90,4 +149,4 @@ function slidePrecedent(){
 	
 	
 	}
-//	precedent.addEventListener('click',slidePrecedent);
+//	precedent.addEventListener('click',slidePrecedent);*/
