@@ -53,6 +53,20 @@ suivant.addEventListener('click' ,slideSuivant);
 
 
 
+function slidePrecedent(){
+	dots[count].classList.remove('dot_selected');
+	if (count>0){
+		count--
+	} else {
+		count=numSlid -1;
+	}
+	dots [count].classList.add('dot_selected')
+	console.log(count);
+	
+	
+	}
+	precedent.addEventListener('click',slidePrecedent);
+
 
 /*
 slides.forEach(post =>{

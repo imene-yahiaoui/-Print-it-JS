@@ -138,16 +138,18 @@ header {
     height: 110px;
     object-fit: none;
     top: -79px;
+	cursor: pointer
 }
 #banner .arrow_right {
 	right: -574px;
 	background-color: #CD006B;
-	color: #f9f911;
-	z-index: 2;
-	width: 39px;
-	height: 88px;
-	object-fit: none;
-	top: -79px;
+    color: #f9f911;
+    z-index: 2;
+    width: 49px;
+    height: 110px;
+    object-fit: none;
+    top: -79px;
+	cursor: pointer
   }
  
 /* Gestion des points du carrousel */
