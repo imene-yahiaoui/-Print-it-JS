@@ -33,7 +33,7 @@ const banner = document.getElementById('banner');
 const img= document.getElementsByClassName('active');
 
 
-console.log(dots);
+console.log(img);
 function slideSuivant(){
 dots[count].classList.remove('dot_selected');
 if (count<numSlid-1){
@@ -47,7 +47,24 @@ if (count<numSlid-1){
 
 dots[count].classList.add('dot_selected');
 console.log(count);
+
+
+
 }
+function imageSuivant(){
+	slides.forEach(post =>{
+		img .innerHTML= {cImg,image}
+		console.log(img);
+
+		count++
+		 
+		
+	
+	
+	
+			})
+}
+
 
 suivant.addEventListener('click' ,slideSuivant);
 
