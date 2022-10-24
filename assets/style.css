@@ -131,7 +131,7 @@ header {
 }
 /*mes modifications*/
 #banner .arrow_left {
-	left: -638px;
+	left: -580px;
 	color: #f9f911;
 	z-index: 2;
 	width: 49px;
@@ -141,7 +141,7 @@ header {
 	cursor: pointer
 }
 #banner .arrow_right {
-	right: -638px;
+	right: -580px;
     color: #f9f911;
     z-index: 2;
     width: 49px;
