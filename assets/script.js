@@ -109,3 +109,5 @@ console.log(paragraphe)
 	precedent.addEventListener('click',slidePrecedent);
 
 
+
+	
