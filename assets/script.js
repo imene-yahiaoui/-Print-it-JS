@@ -110,4 +110,16 @@ console.log(paragraphe)
 
 
 
-	
+	//code clavier
+
+	function keyclavier(e){
+if (e.keyCode==37){
+	slidePrecedent();
+
+}else if 
+(e.keyCode==39){
+	slideSuivant();
+}
+
+	}
+	document.addEventListener('keydown',keyclavier)
