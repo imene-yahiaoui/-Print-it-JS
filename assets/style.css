@@ -105,6 +105,7 @@ header {
 	background-color: var(--secondary-color);
 }
 /* les changmant la */
+ 
 #banner {
 	display: flex;
 	flex-direction: column;
@@ -113,7 +114,11 @@ header {
 	width: 100%;
 	min-height: 470px;
 	position: relative;
+ 
+
 }
+
+  
 #banner img {
 	position: absolute;
 	width: 100%;
@@ -121,14 +126,17 @@ header {
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
-	
+ 
 }
 
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	 
 }
+
+ 
 /*mes modifications*/
 #banner .arrow_left {
 	left: -580px;
@@ -139,7 +147,9 @@ header {
 	object-fit: none;
     top: -79px;
 	cursor: pointer
+
 }
+
 #banner .arrow_right {
 	right: -580px;
     color: #f9f911;
@@ -151,6 +161,8 @@ header {
 	cursor: pointer
   }
  
+ 
+
 /* Gestion des points du carrousel */
 .dots {
 	position: absolute;
@@ -164,7 +176,8 @@ header {
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
 }
 .dot_selected {
 	background-color: #fff;
