@@ -18,6 +18,11 @@ const slides = [
   },
 ];
 
+
+
+
+
+//les variables 
 let count = 0;
 var srcImage = "./assets/images/slideshow/";
 const dots = document.getElementsByClassName("dot");
@@ -26,6 +31,11 @@ const precedent = document.querySelector(".left");
 const numSlid = slides.length;
 const banner = document.getElementById("banner");
 
+
+
+
+
+//function adroit
 function slideSuivant() {
   dots[count].classList.remove("dot_selected");
   if (count < numSlid - 1) {
@@ -33,10 +43,7 @@ function slideSuivant() {
   } else {
     count = 0;
   }
-
   dots[count].classList.add("dot_selected");
-
-
   //images
   const image = slides[count].image;
   var imgBaner = banner.getElementsByClassName("active");
@@ -49,14 +56,14 @@ function slideSuivant() {
   var paragraphe = banner.getElementsByClassName("active_p");
   console.log(paragraphe);
   paragraphe[0].innerHTML = tagline;
- 
-
- 
- 
-   
+  
 }
 suivant.addEventListener("click", slideSuivant);
 
+
+
+
+//function aguche
 function slidePrecedent() {
   dots[count].classList.remove("dot_selected");
   if (count > 0) {
@@ -70,19 +77,20 @@ function slidePrecedent() {
   const image = slides[count].image;
   var imgBaner = banner.getElementsByClassName("active");
   console.log(imgBaner);
-
   imgBaner[0].setAttribute("src", srcImage + image);
-
   console.log(count);
-
   //p
   const tagline = slides[count].tagLine;
-
   var paragraphe = banner.getElementsByClassName("active_p");
   console.log(paragraphe);
   paragraphe[0].innerHTML = tagline;
+  
 }
 precedent.addEventListener("click", slidePrecedent);
+
+
+
+
 
 //code clavier
 
@@ -96,6 +104,10 @@ function keyclavier(i) {
 document.addEventListener("keydown", keyclavier);
 
  
+
+
+
+
  
  //click dots
  
@@ -114,12 +126,10 @@ document.addEventListener("keydown", keyclavier);
    const tagline = slides[0].tagLine;
     var paragraphe = banner.getElementsByClassName("active_p");
     paragraphe[0].innerHTML = tagline;
-    
     dots[0].classList.add("dot_selected");
-
-  
-  }
+   }
   )
+  
   dots[1].addEventListener("click", function(){ 
     dots[2].classList.remove("dot_selected");
     dots[3].classList.remove("dot_selected");
@@ -143,7 +153,6 @@ document.addEventListener("keydown", keyclavier);
     dots[0].classList.remove("dot_selected");
     count=2;
     //images
-
     const image = slides[2].image;
     var imgBaner = banner.getElementsByClassName("active");
       imgBaner[0].setAttribute("src", srcImage + image);
