@@ -114,10 +114,8 @@ header {
 	width: 100%;
 	min-height: 470px;
 	position: relative;
+	}
  
-
-}
-
   
 #banner img {
 	position: absolute;
@@ -159,7 +157,9 @@ header {
     object-fit: none;
     top: -79px;
 	cursor: pointer
+
   }
+  
  
  
 
