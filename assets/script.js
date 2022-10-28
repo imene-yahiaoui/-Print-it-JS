@@ -32,6 +32,19 @@ const numSlid = slides.length;
 const banner = document.getElementById("banner");
 
 
+function ImageParagraphe(count){
+const image = slides[count].image;
+var imgBaner = banner.getElementsByClassName("active");
+console.log(imgBaner);
+imgBaner[0].setAttribute("src", srcImage + image);
+//console.log(image);
+console.log(imgBaner);
+//p
+const tagline = slides[count].tagLine;
+var paragraphe = banner.getElementsByClassName("active_p");
+console.log(paragraphe);
+paragraphe[0].innerHTML = tagline;
+}
 
 
 
@@ -45,17 +58,7 @@ function slideSuivant() {
   }
   dots[count].classList.add("dot_selected");
   //images
-  const image = slides[count].image;
-  var imgBaner = banner.getElementsByClassName("active");
-  console.log(imgBaner);
-  imgBaner[0].setAttribute("src", srcImage + image);
-  //console.log(image);
-  console.log(imgBaner);
-  //p
-  const tagline = slides[count].tagLine;
-  var paragraphe = banner.getElementsByClassName("active_p");
-  console.log(paragraphe);
-  paragraphe[0].innerHTML = tagline;
+ ImageParagraphe(count); 
   
 }
 suivant.addEventListener("click", slideSuivant);
@@ -73,17 +76,7 @@ function slidePrecedent() {
   }
   dots[count].classList.add("dot_selected");
 
-  //images
-  const image = slides[count].image;
-  var imgBaner = banner.getElementsByClassName("active");
-  console.log(imgBaner);
-  imgBaner[0].setAttribute("src", srcImage + image);
-  console.log(count);
-  //p
-  const tagline = slides[count].tagLine;
-  var paragraphe = banner.getElementsByClassName("active_p");
-  console.log(paragraphe);
-  paragraphe[0].innerHTML = tagline;
+  ImageParagraphe(count); 
   
 }
 precedent.addEventListener("click", slidePrecedent);
